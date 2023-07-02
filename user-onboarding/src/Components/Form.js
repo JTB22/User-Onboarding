@@ -19,14 +19,6 @@ const Form = (props) => {
             <h1>Form</h1>
             <form onSubmit={onSubmit}>
                 <h2>Add a user</h2>
-                <button disabled={disabled}>Submit</button>
-                <div className="errors">
-                    <div>{errors.first_name}</div>
-                    <div>{errors.last_name}</div>
-                    <div>{errors.email}</div>
-                    <div>{errors.password}</div>
-                    <div>{errors.terms}</div>
-                </div>
                 <div className="form-group">
                 <label>
                     First Name:&nbsp;
@@ -36,7 +28,9 @@ const Form = (props) => {
                         name="first_name"
                         type="text"
                     />
-                </label>
+                </label>                
+                <div className="errors">{errors.first_name}</div>
+                <br />
                 <label>
                     Last Name:&nbsp;
                     <input
@@ -46,6 +40,8 @@ const Form = (props) => {
                         type="text"
                     />
                 </label>
+                    <div className="errors">{errors.last_name}</div>
+                <br />
                 <label>
                     Email:&nbsp;
                     <input
@@ -55,6 +51,8 @@ const Form = (props) => {
                         type="text"
                     />
                 </label>
+                    <div className="errors">{errors.email}</div>
+                <br />
                 <label>
                     Password:&nbsp;
                     <input
@@ -64,6 +62,8 @@ const Form = (props) => {
                         type="password"
                     />
                 </label>
+                    <div className="errors">{errors.password}</div>
+                <br />
                 <label>
                     Terms of Service:&nbsp;
                     <input
@@ -74,6 +74,9 @@ const Form = (props) => {
                         type="checkbox"
                     />
                 </label>
+                    <div className="errors">{errors.terms}</div>
+                    
+                <button disabled={disabled}>Submit</button>
                 </div>
                 
             </form>
