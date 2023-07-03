@@ -76,7 +76,7 @@ const Form = (props) => {
                 </label>
                     <div className="errors">{errors.terms}</div>
                     
-                <button disabled={disabled}>Submit</button>
+                <button disabled={disabled} name="submit">Submit</button>
                 </div>
                 
             </form>
